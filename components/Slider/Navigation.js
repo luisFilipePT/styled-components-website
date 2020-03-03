@@ -4,7 +4,7 @@ import { NavigateNext, NavigateBefore } from '@styled-icons/material';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ShowcaseLink from './ShowcaseLink';
 import Image from '../Image';
-import { phone } from '../../utils/media';
+import { phone, mobile } from '../../utils/media';
 
 const navHeight = 192;
 
@@ -12,12 +12,16 @@ const SlideNav = styled.nav`
   position: absolute;
   pointer-events: none;
   z-index: 2;
-  top: 0;
+  top: 192px;
   left: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
   transform: translateY(-50%);
+
+  ${mobile(css`
+    top: 96px;
+  `)}
 
   ${phone(css`
     position: relative;

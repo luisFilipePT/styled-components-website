@@ -111,9 +111,14 @@ const Body = styled.div`
 
 const BodyWrapper = styled.div`
   position: relative;
-  top: -192px;
+  margin-top: -192px;
 
   ${mobile(css`
+    margin-top: -96px;
+  `)}
+
+  ${phone(css`
+    margin-top: 0;
     top: -96px;
   `)}
 `;
